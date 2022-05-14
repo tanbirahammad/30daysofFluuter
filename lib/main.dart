@@ -1,3 +1,4 @@
+import 'package:catalog/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/home_page.dart';
@@ -8,11 +9,16 @@ void main(){
   runApp(myApp());
 }
 
-class myApp extends StatelessWidget {
+class myApp extends StatefulWidget {
   
   
   
 
+  @override
+  State<myApp> createState() => _myAppState();
+}
+
+class _myAppState extends State<myApp> {
   @override
   Widget build(BuildContext context) {
     
@@ -29,11 +35,10 @@ class myApp extends StatelessWidget {
      
      routes: {
        "/":(context) => LoginPage(),
-       "/home":(context) =>Homepage(),
+       MyRoute.homeRoute:(context) =>Homepage(),
+       MyRoute.loginRoute:(context) => LoginPage(),
      },
 
     );
   }
-
-  
 }
