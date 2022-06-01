@@ -1,4 +1,5 @@
 import 'package:catalog/utils/routes.dart';
+import 'package:catalog/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/home_page.dart';
@@ -28,13 +29,21 @@ class _myAppState extends State<myApp> {
      theme: ThemeData(
        primarySwatch: Colors.green,
        fontFamily: GoogleFonts.lato().fontFamily,
+       appBarTheme: AppBarTheme(
+         color: Colors.white,
+         elevation: 0.0,
+         iconTheme: IconThemeData(color: Colors.black),
+        
+         
+       ),
      ),
      darkTheme: ThemeData(
        brightness: Brightness.dark
      ),
+     debugShowCheckedModeBanner:false,
      
      routes: {
-       "/":(context) => LoginPage(),
+       "/":(context) => Homepage(),
        MyRoute.homeRoute:(context) =>Homepage(),
        MyRoute.loginRoute:(context) => LoginPage(),
      },
