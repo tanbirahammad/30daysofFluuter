@@ -12,10 +12,10 @@ class Homepage extends StatelessWidget {
         
         title: Text("Catalog App",style: TextStyle(color: Colors.black),),
       ),
-        body:Center(
-          child: Container(
-          child:Text(""),
-      ),
+        body:Container(
+          width: 100,
+          height: 100,
+          color: Colors.red,
         ),
         drawer: MyDrawer(),
       );
